@@ -16,6 +16,7 @@ from itertools import accumulate, combinations, permutations
 from operator import add, iand, ior, itemgetter, mul, xor
 from string import ascii_lowercase, ascii_uppercase
 from typing import *
+
 input = lambda: sys.stdin.readline().rstrip("\r\n")
 
 
@@ -49,4 +50,4 @@ for _ in range(n):
         h = max(x, y, z)
         col[id], col[id + 1], col[id + 2] = h + 1, h + 1, h + 2
 for i in range(1, 9):
-    print(col[i], end = " ")
+    print(col[i], end=" ")

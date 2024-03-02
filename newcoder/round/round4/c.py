@@ -16,6 +16,7 @@ from itertools import accumulate, combinations, permutations
 from operator import add, iand, ior, itemgetter, mul, xor
 from string import ascii_lowercase, ascii_uppercase
 from typing import *
+
 input = lambda: sys.stdin.readline().rstrip("\r\n")
 
 
@@ -48,7 +49,7 @@ for _ in range(k):
                     if stk[-1] == 0:
                         stk.pop()
                 else:
-                    stk[-1] = - (x - stk[-1])
+                    stk[-1] = -(x - stk[-1])
                     cnt = 0
                     while stk and stk[-1] < 0:
                         cnt += abs(stk.pop())

@@ -16,9 +16,12 @@ from itertools import accumulate, combinations, permutations
 from operator import add, iand, ior, itemgetter, mul, xor
 from string import ascii_lowercase, ascii_uppercase
 from typing import *
+
 input = lambda: sys.stdin.readline().rstrip("\r\n")
 
 A, B, S, T = map(int, input().split())
+
+
 def it(A, B, T):
     if T < 0:
         return 0
@@ -36,5 +39,6 @@ def it(A, B, T):
         # 余数也必须小于等于T，这里不加1，是因为最后一个零这个部分被计算了两次
         res += min(p, T)
     return res
+
 
 print(it(A, B, T) - it(A, B, S - 1))

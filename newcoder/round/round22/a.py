@@ -16,6 +16,7 @@ from itertools import accumulate, combinations, permutations
 from operator import add, iand, ior, itemgetter, mul, xor
 from string import ascii_lowercase, ascii_uppercase
 from typing import *
+
 input = lambda: sys.stdin.readline().rstrip("\r\n")
 
 # 直接枚举左端点
@@ -23,31 +24,9 @@ s = input()
 n = len(s)
 cnt = 0
 for i in range(n - 2):
-    if s[i: i + 3] == "red":
+    if s[i : i + 3] == "red":
         cnt += 1
 if cnt >= 2:
     print("Yes")
 else:
     print("No")
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

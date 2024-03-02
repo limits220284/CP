@@ -16,6 +16,7 @@ from itertools import accumulate, combinations, permutations
 from operator import add, iand, ior, itemgetter, mul, xor
 from string import ascii_lowercase, ascii_uppercase
 from typing import *
+
 input = lambda: sys.stdin.readline().rstrip("\r\n")
 
 # 贪心一下即可
@@ -28,9 +29,9 @@ i = 0
 start = 0
 ans = 0
 while i < n:
-    if s[i] == '.':
-        ans += float(s[start:i + 2])
-        print(float(s[start:i + 2]))
+    if s[i] == ".":
+        ans += float(s[start : i + 2])
+        print(float(s[start : i + 2]))
         i += 2
         start = i
     else:

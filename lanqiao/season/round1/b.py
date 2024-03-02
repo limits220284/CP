@@ -16,6 +16,7 @@ from itertools import accumulate, combinations, permutations
 from operator import add, iand, ior, itemgetter, mul, xor
 from string import ascii_lowercase, ascii_uppercase
 from typing import *
+
 input = lambda: sys.stdin.readline().rstrip("\r\n")
 
 
@@ -35,9 +36,10 @@ def solve():
     # print(g)
     # 寻找根节点
     ans = True
+
     def dfs(x, fa, red, green):
         nonlocal ans
-        if s[x] == '1':
+        if s[x] == "1":
             red += 1
             green = 0
         else:
@@ -50,6 +52,7 @@ def solve():
         for y in g[x]:
             if y != fa:
                 dfs(y, x, red, green)
+
     # dfs(0, -1, 0, 0)
     for i in range(n):
         if IN[i] <= 2:
@@ -58,6 +61,7 @@ def solve():
         print("YES")
     else:
         print("NO")
+
 
 t = int(input())
 for _ in range(t):

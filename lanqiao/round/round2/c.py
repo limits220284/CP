@@ -17,6 +17,7 @@ from operator import add, iand, ior, itemgetter, mul, xor
 from string import ascii_lowercase, ascii_uppercase
 from typing import *
 from bisect import *
+
 input = lambda: sys.stdin.readline().rstrip("\r\n")
 
 # 预处理出来10** + 7之内的所有质数

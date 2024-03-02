@@ -16,6 +16,7 @@ from itertools import accumulate, combinations, permutations
 from operator import add, iand, ior, itemgetter, mul, xor
 from string import ascii_lowercase, ascii_uppercase
 from typing import *
+
 input = lambda: sys.stdin.readline().rstrip("\r\n")
 
 
@@ -30,7 +31,7 @@ ans = 0
 for _, v in cnt.items():
     r, b = 0, 0
     for c in v:
-        if c == 'R':
+        if c == "R":
             r += 1
         else:
             b += 1

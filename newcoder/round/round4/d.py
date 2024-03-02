@@ -16,6 +16,7 @@ from itertools import accumulate, combinations, permutations
 from operator import add, iand, ior, itemgetter, mul, xor
 from string import ascii_lowercase, ascii_uppercase
 from typing import *
+
 input = lambda: sys.stdin.readline().rstrip("\r\n")
 
 a, b = map(int, input().split())
@@ -27,6 +28,8 @@ a, b = map(int, input().split())
 # 回溯法求解即可
 
 cnt = Counter()
+
+
 def divide(x):
     i = 2
     while i <= x // i:
@@ -37,11 +40,15 @@ def divide(x):
         i += 1
     if x > 1:
         cnt[x] += 1
+
+
 divide(a)
 divide(b)
 cnt = list(cnt.items())
 n = len(cnt)
 ans = set()
+
+
 def dfs(start, tot):
     if start == n:
         ans.add(tot)
@@ -49,8 +56,10 @@ def dfs(start, tot):
     p, v = cnt[start]
     for i in range(v + 1):
         dfs(start + 1, tot * p ** i)
+
+
 dfs(0, 1)
 ans = sorted(list(ans))
 print(len(ans))
 for x in ans:
-    print(x, end = " ")
+    print(x, end=" ")

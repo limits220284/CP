@@ -16,6 +16,7 @@ from itertools import accumulate, combinations, permutations
 from operator import add, iand, ior, itemgetter, mul, xor
 from string import ascii_lowercase, ascii_uppercase
 from typing import *
+
 input = lambda: sys.stdin.readline().rstrip("\r\n")
 
 
@@ -28,6 +29,8 @@ def solve():
     elif S == "MB":
         X = 1024 * 1024 * X
     print(X // Y)
+
+
 T = int(input())
 for _ in range(T):
     solve()

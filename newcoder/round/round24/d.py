@@ -16,12 +16,14 @@ from itertools import accumulate, combinations, permutations
 from operator import add, iand, ior, itemgetter, mul, xor
 from string import ascii_lowercase, ascii_uppercase
 from typing import *
+
 input = lambda: sys.stdin.readline().rstrip("\r\n")
 
 
 # 一眼二分答案
 n, k, x = map(int, input().split())
 a = list(map(int, input().split()))
+
 
 def check(mid):
     cnt = 0
@@ -31,6 +33,8 @@ def check(mid):
         else:
             cnt += math.ceil((y - mid) / x)
     return cnt <= k
+
+
 mx = 10 ** 18
 l, r = -mx, max(a)
 while l < r:

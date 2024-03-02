@@ -64,11 +64,11 @@ for _ in range(q):
         print("unexisted empire.")
         continue
     x, y = ptr[name]
-    if opt == 'W':
+    if opt == "W":
         x, y = x - 1, y
-    elif opt == 'A':
+    elif opt == "A":
         x, y = x, y - 1
-    elif opt == 'S':
+    elif opt == "S":
         x, y = x + 1, y
     else:
         x, y = x, y + 1
@@ -101,6 +101,5 @@ for _ in range(q):
             else:
                 pa[name_pre] = name
                 lands[name] += lands[name_pre]
-        print(pa[name] + ' wins!')
+        print(pa[name] + " wins!")
         ptr[name] = [x, y]
-

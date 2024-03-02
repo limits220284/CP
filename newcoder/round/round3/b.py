@@ -17,17 +17,18 @@ from operator import add, iand, ior, itemgetter, mul, xor
 from string import ascii_lowercase, ascii_uppercase
 from typing import *
 from math import *
+
 input = lambda: sys.stdin.readline().rstrip("\r\n")
 
 # 枚举最终要变成字母是什么，然后判断需要多少次即可
 s = input()
 ans = inf
 for i in range(26):
-    tar = chr(i + ord('a'))
+    tar = chr(i + ord("a"))
     print(tar)
     cnt = 0
     for _, c in enumerate(s):
-        x = ord(c) - ord('a')
+        x = ord(c) - ord("a")
         mi = (x - i) % 26
         mi = min(mi, 26 - mi)
         cnt += mi

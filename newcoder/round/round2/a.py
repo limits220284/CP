@@ -16,6 +16,7 @@ from itertools import accumulate, combinations, permutations
 from operator import add, iand, ior, itemgetter, mul, xor
 from string import ascii_lowercase, ascii_uppercase
 from typing import *
+
 input = lambda: sys.stdin.readline().rstrip("\r\n")
 
 s = input()
@@ -25,6 +26,6 @@ t = input()
 m = len(t)
 ans = 0
 for i in range(n // 2):
-    if s[i: i + m] == t:
+    if s[i : i + m] == t:
         ans += 1
 print(ans)

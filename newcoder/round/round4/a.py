@@ -16,11 +16,12 @@ from itertools import accumulate, combinations, permutations
 from operator import add, iand, ior, itemgetter, mul, xor
 from string import ascii_lowercase, ascii_uppercase
 from typing import *
+
 input = lambda: sys.stdin.readline().rstrip("\r\n")
 
 n, k = map(int, input().split())
 if k * 3 > n:
     print(-1)
 else:
-    print("you" * k, end = "")
+    print("you" * k, end="")
     print("u" * (n - 3 * k))

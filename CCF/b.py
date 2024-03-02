@@ -1,4 +1,4 @@
-x = input().split(' ')
+x = input().split(" ")
 w, h = int(x[0]), int(x[1])
 if w == h:
     print(w, h)
@@ -13,9 +13,9 @@ if w < h:
         print(w, w * 3)
 elif w > h:
     if w < h * 2:
-        print((w - h) * 2, 0) # 正确
+        print((w - h) * 2, 0)  # 正确
     elif h * 2 == w:
-        print(h, h) # 正确
+        print(h, h)  # 正确
     elif w < 3 * h:
         print(w, w - h - h)
     else:

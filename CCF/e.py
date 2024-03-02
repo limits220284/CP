@@ -9,6 +9,7 @@ not_prime = [False] * (N + 1)
 d = [0] * (N + 1)
 num = [0] * (N + 1)
 
+
 def pre(n):
     d[1] = 1
     for i in range(2, n + 1):
@@ -26,6 +27,8 @@ def pre(n):
                 break
             num[i * pri_j] = 1
             d[i * pri_j] = d[i] * 2
+
+
 pre(N)
 # print(d)
 hsh = Counter(pri)

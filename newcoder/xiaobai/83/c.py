@@ -16,9 +16,12 @@ from itertools import accumulate, combinations, permutations
 from operator import add, iand, ior, itemgetter, mul, xor
 from string import ascii_lowercase, ascii_uppercase
 from typing import *
+
 input = lambda: sys.stdin.readline().rstrip("\r\n")
 
 t = int(input())
+
+
 def solve():
     a, b, c = map(int, input().split())
     pa, pb, pc = a / 16, b / 16, c / 16
@@ -26,6 +29,7 @@ def solve():
     pdesk = pb ** 4 + pc ** 4
     pans = 1820 * p12tong * pdesk + pa ** 16
     print(round(pans, 11))
+
 
 for _ in range(t):
     solve()

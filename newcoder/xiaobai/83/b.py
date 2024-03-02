@@ -16,6 +16,7 @@ from itertools import accumulate, combinations, permutations
 from operator import add, iand, ior, itemgetter, mul, xor
 from string import ascii_lowercase, ascii_uppercase
 from typing import *
+
 input = lambda: sys.stdin.readline().rstrip("\r\n")
 
 # 如果b[0] >= x,直接输出1
@@ -23,8 +24,8 @@ n, m, x = map(int, input().split())
 a = list(map(int, input().split()))
 b = list(map(int, input().split()))
 
-a.sort(reverse = True)
-b.sort(reverse = True)
+a.sort(reverse=True)
+b.sort(reverse=True)
 la, lb = 0, 0
 cnt = 0
 tot = 0

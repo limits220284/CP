@@ -16,6 +16,7 @@ from itertools import accumulate, combinations, permutations
 from operator import add, iand, ior, itemgetter, mul, xor
 from string import ascii_lowercase, ascii_uppercase
 from typing import *
+
 input = lambda: sys.stdin.readline().rstrip("\r\n")
 
 n = int(input())
@@ -42,7 +43,7 @@ if n % 2 == 1:
             else:
                 ans[i][j] = even[r]
                 r += 1
-            print(ans[i][j], end = ' ')
+            print(ans[i][j], end=" ")
         print()
 else:
     for i in range(n):
@@ -59,5 +60,5 @@ else:
             ans[i] = ans[i][::-1]
     for i in range(n):
         for j in range(n):
-            print(ans[i][j], end = ' ')
+            print(ans[i][j], end=" ")
         print()

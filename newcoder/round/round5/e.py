@@ -16,6 +16,7 @@ from itertools import accumulate, combinations, permutations
 from operator import add, iand, ior, itemgetter, mul, xor
 from string import ascii_lowercase, ascii_uppercase
 from typing import *
+
 input = lambda: sys.stdin.readline().rstrip("\r\n")
 
 # 贪心构造题目
@@ -28,6 +29,10 @@ mx, mi = max(k, n - k), min(k, n - k)
 MOD = 10 ** 9 + 7
 ans = 1
 ans = ans * pow(3, mx - 1, MOD) * pow(4, mi, MOD) % MOD
-ans = ans * pow(4, (mx - 1) * (mx - 2) // 2, MOD) * pow(6, (mx - 1) * mi + mi * (mi - 1) // 2, MOD) % MOD
+ans = (
+    ans
+    * pow(4, (mx - 1) * (mx - 2) // 2, MOD)
+    * pow(6, (mx - 1) * mi + mi * (mi - 1) // 2, MOD)
+    % MOD
+)
 print(ans % MOD)
-

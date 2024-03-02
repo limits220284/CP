@@ -18,6 +18,7 @@ from string import ascii_lowercase, ascii_uppercase
 from typing import *
 from bisect import *
 from math import *
+
 input = lambda: sys.stdin.readline().rstrip("\r\n")
 
 N = 100010
@@ -29,12 +30,15 @@ while True:
     if now[m] > 10 ** 16:
         break
     m += 1
+
+
 def solve():
     a, n = map(int, input().split())
     if a > m:
         print(0)
     else:
         print(n // now[a - 1] - n // now[a])
+
 
 t = int(input())
 for _ in range(t):
